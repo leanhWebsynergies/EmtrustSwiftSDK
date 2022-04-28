@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F926D281AB3D000CC0891 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F926A281AB3D000CC0891 /* ViewController.swift */; };
 		0421DB42281AA2A80076017D /* EmtrustSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F821DB281AA21400C4CB23 /* EmtrustSDK.framework */; };
 		0421DB43281AA2A80076017D /* EmtrustSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04F821DB281AA21400C4CB23 /* EmtrustSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04F82196281AA17300C4CB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F82195281AA17300C4CB23 /* AppDelegate.swift */; };
@@ -16,7 +17,6 @@
 		04F821AD281AA17600C4CB23 /* TestEmtrustSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F821AC281AA17600C4CB23 /* TestEmtrustSDKTests.swift */; };
 		04F821B8281AA17600C4CB23 /* TestEmtrustSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F821B7281AA17600C4CB23 /* TestEmtrustSDKUITests.swift */; };
 		04F821CA281AA19E00C4CB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F821C8281AA19E00C4CB23 /* Main.storyboard */; };
-		04F821CB281AA19E00C4CB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F821C9281AA19E00C4CB23 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040F926A281AB3D000CC0891 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04F82192281AA17300C4CB23 /* TestEmtrustSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestEmtrustSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F82195281AA17300C4CB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F82197281AA17300C4CB23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		04F821B7281AA17600C4CB23 /* TestEmtrustSDKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEmtrustSDKUITests.swift; sourceTree = "<group>"; };
 		04F821B9281AA17600C4CB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F821C8281AA19E00C4CB23 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		04F821C9281AA19E00C4CB23 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../RNsdkIOS/MySdk-poc/MySdk-poc/ViewController.swift"; sourceTree = "<group>"; };
 		04F821D5281AA21400C4CB23 /* EmtrustSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmtrustSDK.xcodeproj; path = ../../EmtrustSDK/EmtrustSDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,11 +139,11 @@
 		04F82194281AA17300C4CB23 /* TestEmtrustSDK */ = {
 			isa = PBXGroup;
 			children = (
+				040F926A281AB3D000CC0891 /* ViewController.swift */,
 				04F821D5281AA21400C4CB23 /* EmtrustSDK.xcodeproj */,
 				04F82195281AA17300C4CB23 /* AppDelegate.swift */,
 				04F82197281AA17300C4CB23 /* SceneDelegate.swift */,
 				04F821C8281AA19E00C4CB23 /* Main.storyboard */,
-				04F821C9281AA19E00C4CB23 /* ViewController.swift */,
 				04F8219E281AA17500C4CB23 /* Assets.xcassets */,
 				04F821A0281AA17500C4CB23 /* LaunchScreen.storyboard */,
 				04F821A3281AA17500C4CB23 /* Info.plist */,
@@ -332,8 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040F926D281AB3D000CC0891 /* ViewController.swift in Sources */,
 				04F82196281AA17300C4CB23 /* AppDelegate.swift in Sources */,
-				04F821CB281AA19E00C4CB23 /* ViewController.swift in Sources */,
 				04F82198281AA17300C4CB23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
