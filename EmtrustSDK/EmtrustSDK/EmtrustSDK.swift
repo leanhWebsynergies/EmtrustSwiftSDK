@@ -50,10 +50,12 @@ public class generateSecretPhrase {
                          print(error?.localizedDescription ?? "No data")
                          return
                      }
-                     let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                     if let responseJSON = responseJSON as? [String: Any] {
-                         print(responseJSON) //Code after Successfull POST Request
-                     }
+//                     let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//                     if let responseJSON = responseJSON as? [String: Any] {
+//                         print(responseJSON) //Code after Successfull POST Request
+//                     }
+                    let responseJSON =  String(data: data, encoding: .utf8)!
+                    print("new secret phrases: \n", responseJSON) //Code after Successfull POST Request
                  }
 
                  task.resume()
