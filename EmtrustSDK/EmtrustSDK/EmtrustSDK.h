@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#include <ifaddrs.h>
 //! Project version number for EmtrustSDK.
 FOUNDATION_EXPORT double EmtrustSDKVersionNumber;
 
