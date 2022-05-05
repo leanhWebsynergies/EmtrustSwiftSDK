@@ -9,7 +9,16 @@ import Foundation
 import UIKit
 public class generate {
     public typealias CompletionHandlerSDK = (_ success:Bool, _ data: Any) -> Void
-    public init() {}
+    public init() {
+        var nodejsThread: Thread? = nil
+            nodejsThread = Thread(
+                target: self,
+                selector: #selector(startNode),
+                object: nil)
+            // Set 2MB of stack space for the Node.js thread.
+            nodejsThread?.stackSize = 2 * 1024 * 1024
+            nodejsThread?.start()
+    }
     public func secretPhrase( completionHandlerSdk: @escaping CompletionHandlerSDK) {
         var bytes = [Int8](repeating: 0, count: 32)
         // Fill bytes with secure random data
@@ -68,6 +77,12 @@ public class generate {
                 print("error")
             }
         })
+    }
+    @objc func startNode() {
+        let srcPath = "/Users/mac/Desktop/demo-test/SDK/EmtrustSwiftSDK/EmtrustSDK/emtrustlib/main.js"
+        let nodeArguments = ["node", srcPath]
+        //NodeRunner.startEngine(withArguments: nodeArguments as [Any])
+        NodeRunner.startEngine(withArguments: nodeArguments)
     }
 }
 public class file {

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #include <ifaddrs.h>
+#import "NodeRunner.h"
 //! Project version number for EmtrustSDK.
 FOUNDATION_EXPORT double EmtrustSDKVersionNumber;
 

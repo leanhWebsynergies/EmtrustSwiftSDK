@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415CD6A28238A7E00F9AFFF /* NodeRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0415CD6528238A1600F9AFFF /* NodeRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0415CD7028238AB100F9AFFF /* NodeRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0415CD6F28238AB100F9AFFF /* NodeRunner.mm */; };
+		0415CD8228238CD900F9AFFF /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 0415CD8128238CD900F9AFFF /* main.js */; };
+		0415CE6E2823DCC900F9AFFF /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */; platformFilter = ios; };
+		0415CE6F2823DCC900F9AFFF /* NodeMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04BD5E11281A9A10005A375E /* EmtrustSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BD5E07281A9A10005A375E /* EmtrustSDK.framework */; };
 		04BD5E16281A9A10005A375E /* EmtrustSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD5E15281A9A10005A375E /* EmtrustSDKTests.swift */; };
 		04BD5E18281A9A10005A375E /* EmtrustSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD5E0A281A9A10005A375E /* EmtrustSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,7 +29,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0415CE702823DCCA00F9AFFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0415CE6F2823DCC900F9AFFF /* NodeMobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0415CD6528238A1600F9AFFF /* NodeRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeRunner.h; sourceTree = "<group>"; };
+		0415CD6F28238AB100F9AFFF /* NodeRunner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NodeRunner.mm; sourceTree = "<group>"; };
+		0415CD8128238CD900F9AFFF /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NodeMobile.framework; path = "libnode/NodeMobile.xcframework/ios-x86_64-simulator/NodeMobile.framework"; sourceTree = "<group>"; };
 		04BD5E07281A9A10005A375E /* EmtrustSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmtrustSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD5E0A281A9A10005A375E /* EmtrustSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmtrustSDK.h; sourceTree = "<group>"; };
 		04BD5E0B281A9A10005A375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0415CE6E2823DCC900F9AFFF /* NodeMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415CD5D282389A700F9AFFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0415CD8028238CD900F9AFFF /* emtrustlib */ = {
+			isa = PBXGroup;
+			children = (
+				0415CD8128238CD900F9AFFF /* main.js */,
+			);
+			path = emtrustlib;
+			sourceTree = "<group>";
+		};
 		04BD5DFD281A9A0F005A375E = {
 			isa = PBXGroup;
 			children = (
+				0415CD8028238CD900F9AFFF /* emtrustlib */,
 				04BD5E09281A9A10005A375E /* EmtrustSDK */,
 				04BD5E14281A9A10005A375E /* EmtrustSDKTests */,
 				04BD5E08281A9A10005A375E /* Products */,
+				0415CD5D282389A700F9AFFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,10 +117,12 @@
 		04BD5E09281A9A10005A375E /* EmtrustSDK */ = {
 			isa = PBXGroup;
 			children = (
+				0415CD6F28238AB100F9AFFF /* NodeRunner.mm */,
 				04BD5E0A281A9A10005A375E /* EmtrustSDK.h */,
 				04BD5E0B281A9A10005A375E /* Info.plist */,
 				04BD5E23281A9C66005A375E /* EmtrustSDK.swift */,
 				04CDCC07281BC9F100C1893F /* NetworkHandler.swift */,
+				0415CD6528238A1600F9AFFF /* NodeRunner.h */,
 			);
 			path = EmtrustSDK;
 			sourceTree = "<group>";
@@ -100,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BD5E18281A9A10005A375E /* EmtrustSDK.h in Headers */,
+				0415CD6A28238A7E00F9AFFF /* NodeRunner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +159,7 @@
 				04BD5E03281A9A10005A375E /* Sources */,
 				04BD5E04281A9A10005A375E /* Frameworks */,
 				04BD5E05281A9A10005A375E /* Resources */,
+				0415CE702823DCCA00F9AFFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0415CD8228238CD900F9AFFF /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +250,7 @@
 			files = (
 				04BD5E24281A9C66005A375E /* EmtrustSDK.swift in Sources */,
 				04CDCC08281BC9F100C1893F /* NetworkHandler.swift in Sources */,
+				0415CD7028238AB100F9AFFF /* NodeRunner.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +399,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libnode",
+					"$(PROJECT_DIR)/libnode/NodeMobile.xcframework/ios-x86_64-simulator",
+					"$(PROJECT_DIR)/libnode/NodeMobile.xcframework/ios-arm64",
+					"$(PROJECT_DIR)/libnode/Release-universal",
+				);
 				INFOPLIST_FILE = EmtrustSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,14 +435,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libnode",
+					"$(PROJECT_DIR)/libnode/NodeMobile.xcframework/ios-x86_64-simulator",
+					"$(PROJECT_DIR)/libnode/NodeMobile.xcframework/ios-arm64",
+					"$(PROJECT_DIR)/libnode/Release-universal",
+				);
 				INFOPLIST_FILE = EmtrustSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
