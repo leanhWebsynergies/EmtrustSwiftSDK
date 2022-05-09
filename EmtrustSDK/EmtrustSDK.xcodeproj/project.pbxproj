@@ -12,6 +12,7 @@
 		0415CD8228238CD900F9AFFF /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 0415CD8128238CD900F9AFFF /* main.js */; };
 		0415CE6E2823DCC900F9AFFF /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */; platformFilter = ios; };
 		0415CE6F2823DCC900F9AFFF /* NodeMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		044281702828F16F00A19BF8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442816F2828F16F00A19BF8 /* Singleton.swift */; };
 		04BD5E11281A9A10005A375E /* EmtrustSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BD5E07281A9A10005A375E /* EmtrustSDK.framework */; };
 		04BD5E16281A9A10005A375E /* EmtrustSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD5E15281A9A10005A375E /* EmtrustSDKTests.swift */; };
 		04BD5E18281A9A10005A375E /* EmtrustSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD5E0A281A9A10005A375E /* EmtrustSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +49,7 @@
 		0415CD6F28238AB100F9AFFF /* NodeRunner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NodeRunner.mm; sourceTree = "<group>"; };
 		0415CD8128238CD900F9AFFF /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		0415CE6D2823DCC900F9AFFF /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NodeMobile.framework; path = "libnode/NodeMobile.xcframework/ios-x86_64-simulator/NodeMobile.framework"; sourceTree = "<group>"; };
+		0442816F2828F16F00A19BF8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		04BD5E07281A9A10005A375E /* EmtrustSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmtrustSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD5E0A281A9A10005A375E /* EmtrustSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmtrustSDK.h; sourceTree = "<group>"; };
 		04BD5E0B281A9A10005A375E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				04BD5E23281A9C66005A375E /* EmtrustSDK.swift */,
 				04CDCC07281BC9F100C1893F /* NetworkHandler.swift */,
 				0415CD6528238A1600F9AFFF /* NodeRunner.h */,
+				0442816F2828F16F00A19BF8 /* Singleton.swift */,
 			);
 			path = EmtrustSDK;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BD5E24281A9C66005A375E /* EmtrustSDK.swift in Sources */,
+				044281702828F16F00A19BF8 /* Singleton.swift in Sources */,
 				04CDCC08281BC9F100C1893F /* NetworkHandler.swift in Sources */,
 				0415CD7028238AB100F9AFFF /* NodeRunner.mm in Sources */,
 			);

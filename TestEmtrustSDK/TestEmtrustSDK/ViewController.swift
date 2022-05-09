@@ -15,7 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-  
+    @IBAction func initServer(_ sender: Any) {
+        EmtrustSDK.generate().initServer()
+    }
+    
     @IBAction func generateDid(_ sender: Any) {
         EmtrustSDK.generate().secretPhrase(completionHandlerSdk: {(success, data) -> Void in
         // When call api completes,control flow goes here.

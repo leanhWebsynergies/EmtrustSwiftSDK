@@ -40,6 +40,14 @@
                                     <action selector="decryptFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhI-Dh-1SS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxQ-Uu-dMz">
+                                <rect key="frame" x="170" y="261" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Run server"/>
+                                <connections>
+                                    <action selector="initServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Wf-Cd-uEs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
