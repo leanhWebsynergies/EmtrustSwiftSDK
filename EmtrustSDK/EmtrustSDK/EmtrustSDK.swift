@@ -47,14 +47,16 @@ public class generate {
         }
     }
     
-    public func did(secretPhrase: String) {
+    public func did(secretPhrase: String, completionHandlerSdk: @escaping CompletionHandlerSDK) {
         let parameters: [NSString: Any] = ["secret": secretPhrase]
         let jsonData = (try? JSONSerialization.data(withJSONObject: parameters))!
         NetworkHandler().httpPostJSONResult(jsonData: jsonData, des: "generate-did",  completionHandler: { (success, data) -> Void in
             // When call api completes,control flow goes here.
             if success {
                 // call api success
-                print("data did success", data)
+//                print("data did success", data)
+                let flag = true
+                completionHandlerSdk(flag, data)
             } else {
                 // call api fail
                 print("error")

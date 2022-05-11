@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56m-Sa-hkG">
-                                <rect key="frame" x="180" y="499" width="55" height="30"/>
+                                <rect key="frame" x="180" y="556" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Decrypt"/>
                                 <connections>
@@ -46,6 +46,14 @@
                                 <state key="normal" title="Run server"/>
                                 <connections>
                                     <action selector="initServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Wf-Cd-uEs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vec-vl-qYy">
+                                <rect key="frame" x="141" y="490" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate Signature"/>
+                                <connections>
+                                    <action selector="generateSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qg-Rl-Czb"/>
                                 </connections>
                             </button>
                         </subviews>

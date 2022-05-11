@@ -37,6 +37,7 @@ public class NetworkHandler {
                 task.resume()
             }
         }
+    
     func httpPostJSONResult(jsonData: Data, des: String, completionHandler: @escaping CompletionHandler) {
         let addr = getWiFiAddress()
         if !jsonData.isEmpty {
@@ -54,16 +55,15 @@ public class NetworkHandler {
                          print(error?.localizedDescription ?? "No data")
                          return
                      }
-                     let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                    let flag = true
-              
-                     if let responseJSON = responseJSON as? [String: Any] {
-                        completionHandler(flag, responseJSON)
-                     }
-                 }
+             
+               // let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                let flag = true
+                completionHandler(flag, data)
+            }
                 task.resume()
             }
         }
+    
     func getWiFiAddress() -> String? {
         var address : String?
 
