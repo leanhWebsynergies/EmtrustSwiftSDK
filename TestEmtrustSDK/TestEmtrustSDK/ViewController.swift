@@ -33,7 +33,7 @@ class ViewController: UIViewController {
                     do {
                         let message = try decoder.decode(ResponseMessage.self, from: data as! Data )
                         self.didObject = message
-                        self.didData = data as! Data
+                        self.didData = data as? Data
                         print("identity:", message.message.identity)
                         print("privateKey:", message.message.privateKey)
                         print("publicKey:", message.message.publicKey)
@@ -55,13 +55,24 @@ class ViewController: UIViewController {
     
     @IBAction func generateSignature(_ sender: Any) {
         print(didObject as Any)
-//        let encoder = JSONEncoder()
-//        encoder.outputFormatting = .prettyPrinted
-//        let data = try! encoder.encode(didObject?.message)
-//        let didJSON = String(data: data, encoding: .utf8)!
-//        print("didJSON", didJSON)
-//        let jsonData = (try? JSONSerialization.data(withJSONObject: [didJSON]))!
-        EmtrustSDK.generate().signature(jsonData: didData!)
+        let jsonObject: [String: Any] = [
+            "didObject": [
+            "identity": didObject?.message.identity as Any,
+            "privateKey": didObject?.message.privateKey as Any,
+            "publicKey": didObject?.message.publicKey as Any,
+            "secret": didObject?.message.secret as Any,
+       
+            "demographics": [
+                "name": didObject?.message.demographics.name,
+                "email": didObject?.message.demographics.email,
+                "pic": didObject?.message.demographics.pic
+                    ],
+            "enrollStatus": didObject?.message.enrollStatus as Any
+        ]
+    ]
+        
+        let jsonData = (try? JSONSerialization.data(withJSONObject: jsonObject))!
+        EmtrustSDK.generate().signature(jsonData: jsonData)
     }
     
     @IBAction func decryptFile(_ sender: Any) {
