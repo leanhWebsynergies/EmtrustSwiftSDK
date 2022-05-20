@@ -20,6 +20,20 @@ class ViewController: UIViewController {
         EmtrustSDK.generate().initServer()
     }
     
+    @IBAction func startReactNative(_ sender: Any) {
+        EmtrustSDK.generate().secretPhrase(completionHandlerSdk: {(success, data) -> Void in
+        // When call api completes,control flow goes here.
+        if success {
+            // call api success
+            print("data secret phrases success \n", data)
+           
+        } else {
+            // call api fail
+            print("error")
+        }
+    });
+    }
+    
     @IBAction func generateDid(_ sender: Any) {
         EmtrustSDK.generate().secretPhrase(completionHandlerSdk: {(success, data) -> Void in
         // When call api completes,control flow goes here.
@@ -72,24 +86,20 @@ class ViewController: UIViewController {
     ]
         
         let jsonData = (try? JSONSerialization.data(withJSONObject: jsonObject))!
-        EmtrustSDK.generate().signature(jsonData: jsonData)
+        EmtrustSDK.generate().signature(jsonData: jsonData, completionHandlerSdk: {(success, data) -> Void in
+            // When call api completes,control flow goes here.
+            if success {
+                // call api success
+                print("data signature success \n", data)
+            } else {
+                // call api fail
+                print("error")
+            }
+        });
     }
     
     @IBAction func decryptFile(_ sender: Any) {
         //EmtrustSDK.file().decrypt();
-    }
-    @IBAction func startReactNative(_ sender: Any) {
-        EmtrustSDK.generate().secretPhrase(completionHandlerSdk: {(success, data) -> Void in
-        // When call api completes,control flow goes here.
-        if success {
-            // call api success
-            print("data secret phrases success \n", data)
-           
-        } else {
-            // call api fail
-            print("error")
-        }
-    });
     }
 }
 

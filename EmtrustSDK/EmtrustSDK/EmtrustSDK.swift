@@ -63,13 +63,14 @@ public class generate {
             }
         })
     }
-    public func signature(jsonData: Data) {
+    public func signature(jsonData: Data, completionHandlerSdk: @escaping CompletionHandlerSDK) {
         print("generate-signature")
         NetworkHandler().httpPostStringResult(jsonData: jsonData, des: "generate-signature", completionHandler: { (success, data) -> Void in
             // When call api completes,control flow goes here.
             if success {
                 // call api success
-                print("data success \n", data)
+                let flag = true
+                completionHandlerSdk(flag, data)
             } else {
                 // call api fail
                 print("error")
